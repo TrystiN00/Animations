@@ -1,6 +1,2 @@
-# first
-test repository
-This is my 1st time ....
-When I.....
-
-   XYZ
+# Hello World!
+Hier I will upload my animations.
