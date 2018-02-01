@@ -1,0 +1,74 @@
+<!DOCTYPE HTML>
+<html lang= "pl"></html>
+<head>
+    <meta charset= "utf-8">
+    <meta name= "description" content= "s,d,f">
+    <meta name="keywords" content="x,c,z">
+    <meta name= "viewport" content="width= device-width, initial-scale=1.0">
+    <title>Transition Animation</title>
+    <style>
+.circle
+{
+    width: 40vh; /*szerokość równa 40% szerokości przedlądarki */
+    height: 40vh;
+    background-color: white;
+    border-radius: 50%;
+    border-top: 120px solid green;
+    border-right: 120px solid blue;
+    border-bottom: 120px solid red; 
+    border-left: 120px solid orange;
+    margin:0 auto;
+    transition: all 10s ease, border 3s ease-in-out, background-color 10s ease;
+}
+/*.circle:hover
+{
+    transform: rotate(3690deg) scale(0);
+}
+*/
+.active
+{
+    transform: rotate(13690deg);
+    border-top-color: crimson;
+    border-right-color: cadetblue;
+    border-bottom-color: yellow;
+    border-left-color: darkgreen;
+    background-color: aqua;
+    
+}
+button
+{
+    background-color: brown;
+    color: white;
+    width: 200px;
+    height: 30px;
+    display: block;
+    margin: 20px auto;
+    border: none;
+}
+/*button:hover
+{
+    cursor: pointer;
+} */
+   
+    
+    </style>
+
+
+</head>
+
+<body>
+
+    <div class= "circle"></div>
+    <button>Spin</button>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+    $('button').on('click', function()
+    {
+        $('.circle').toggleClass('active');        //dodaje klase
+    })
+</script>
+</body>
+
+</html>
